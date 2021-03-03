@@ -50,17 +50,17 @@ class Aliment
     private $calories;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="float")
      */
     private $proteine;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="float")
      */
     private $glucide;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="float")
      */
     private $lipide;
 
@@ -110,19 +110,19 @@ class Aliment
         return $this;
     }
 
-    public function getCalories(): ?string
+    public function getCalories(): ?int
     {
         return $this->calories;
     }
 
-    public function setCalories(): ?string
+    public function setCalories(int $calories): self
     {
         $this->calories = $calories;
 
-        return $this->calories;
+        return $this;
     }
 
-    public function getProteine(): ?string
+    public function getProteine(): ?float
     {
         return $this->proteine;
     }
@@ -134,7 +134,7 @@ class Aliment
         return $this;
     }
 
-    public function getGlucide(): ?string
+    public function getGlucide(): ?float
     {
         return $this->glucide;
     }
@@ -146,7 +146,7 @@ class Aliment
         return $this;
     }
 
-    public function getLipide(): ?string
+    public function getLipide(): ?float
     {
         return $this->lipide;
     }
