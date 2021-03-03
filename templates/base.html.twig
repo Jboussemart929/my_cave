@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title class="border border-primary rounded p-2 m2 text-white bg-sucess"> {% block title %}{% endblock %}
+			</title>
+			{% block stylesheets %}{% endblock %}
+
+			<link rel="stylesheet" href="{{ asset('css/style.css')}}">
+		</head>
+		<body>
+
+
+			<div class="collapse navbar-collapse" id="navbarColor03">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path("aliments") }}"><img src="images/logo.png"></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path("admin_aliment") }}">Admin</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path("inscription") }}">Inscription</a>
+					</li>
+					{% if not app.user %}
+						<li class="nav-item">
+							<a class="nav-link" href="{{ path("connexion") }}">Connexion</a>
+						</li>
+					{% else %}
+						<li class="nav-item">
+							<a class="nav-link" href="{{ path("deconnexion") }}">Deconnexion</a>
+						</li>
+					{% endif %}
+				</div>
+			</nav>
+      <h1>
+					{% block titre %}
+					{% endblock %}
+				</h1>
+			<div class="bouteille">
+				
+				{% block body %}
+				{% endblock %}
+
+				{% block javascripts %}{% endblock %}
+			</div>
+		</body>
+	</html>

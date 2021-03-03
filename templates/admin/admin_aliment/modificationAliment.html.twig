@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+{% block titre %}
+    {% if isModification %}
+        Modification de {{aliment.nom}}
+    {% else %}
+        Ajout d'un produit à notre Cave
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+{{form_start(form)}}
+    {{form_widget(form)}}
+    <input type="submit" class="btn btn-success" value="Enregistrer">
+{{form_end(form)}}
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Super cave a vin{% endblock %}
+
+{% block titre %}Notre cave prestigieuse{% if isCalorie %}{% endif %}
+{% endblock %}
+{% block body %}
+
+<div class="Article">
+{% for aliment in aliments %}
+<div class="col-3">
+    <div class="card m-4">
+        <div class="card-header text-center">
+            <img class="img-fluid" alt="Responsive image" src="{{ asset('images/' ~ aliment.image )}}">
+            <div class="card-body">
+                <h2> {{ aliment.nom }}</h2>
+                <p>prix : {{ aliment.prix }} year</p>
+            </div>
+            <div class="card-text">
+                <p>grapes: {{ aliment.calories }}</p>
+                <p>country: {{ aliment.glucide }}</p>
+                <p>region: {{ aliment.proteine }}</p>
+                <p>description: {{ aliment.lipide }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

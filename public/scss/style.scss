@@ -1,0 +1,90 @@
+body{
+    background-color: #885c7E;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    background-color: #8842d5;
+    /*height: 100%; /* This enables full height */
+    position: left; /* The position will be constant */
+     /* This enables scrolling */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+li a {
+    display: flex;
+    color: white;
+    padding: 9px 17px;
+    text-decoration: none;
+}
+
+/* When the link is hovered on, its color will change */
+li a:hover {
+    background-color: #7300ff;
+   
+}
+
+h1{
+    text-align: center;
+    background-color: #8842d5;
+    color: white;
+}
+
+a.button{
+    background-color: #8842d5;
+    text-decoration: none;
+    color: white;
+    
+}
+a:hover {
+    background-color: #7300ff;
+   
+}
+
+table{
+    margin: auto;
+}
+td{
+    margin: 20px;
+}
+
+article{
+    margin: auto;
+    
+}
+
+table{
+    border : 2px solid black;
+    width: 100%;
+    background-color: #88002D;
+}
+td{
+    margin: 20px;
+    border : 2px solid black;
+    color: white;
+}
+tr{
+    border : 2px solid black;
+   
+}
+.bouteille{
+    display: flex;
+    margin: auto;
+    border: 2px solid black;
+    width: 100%;
+    background-color: #88002D;
+}
+.Article{
+    display: flex;
+    padding: 50px;
+}
+.table-info{
+    border: 2px solid black;
+}
